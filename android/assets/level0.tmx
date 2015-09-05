@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="40" height="20" tilewidth="16" tileheight="16" backgroundcolor="#000000" nextobjectid="11">
+ <tileset firstgid="1" source="tileset.tsx"/>
+ <layer name="back" width="40" height="20">
+  <properties>
+   <property name="light" value=""/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJzdVdEOwjAI7K+5+QObJn6A0Xc79fvtEk0IAkddJ0aSy14oPejtSOn/41iwV7Bdub4Hl4KNguysofWB6n8LWeFIc85B3E7P7wD43YP43YwZRr8rB59hNB+KqaD7YX4t3/fgnMdOwNU443nfCdT4VEuvGCvOSP3NGuiVXrWZSLkSv3kXWH6r9aQF7VXSL42ecRzS+25Cu4DzQztnNM4mcH928EH/CMrl99Xs3ha6bV17KbiGovkg/a09C6/vafyW+hz1Su6bXK9Iq5I/WF7pmQn1yq6inuSjknc9AEBgs4w=
+  </data>
+ </layer>
+ <layer name="front" width="40" height="20">
+  <data encoding="base64" compression="zlib">
+   eJztVTsOwjAMDZ8LQJkQG1s3KAswAwMXgCNwBG6PIyWSsezYSRBd8qSnqvWz/RKptnMNDeOiV96tsRJtT56/xgV4DbyFb3dj7tOg2QJXAudKPGostajW46XEPZbAicBFIj4AO+DUUIvTerxDfIP6Wf0Nod4MeBBiFDla7A/fR6pmPCc9K9VI/aK2c3ydEn+4pqVvSpMLq7+x0PzVIcff+i+OvoFnh/bfcajZOancOMd3Tr87OvO5GV4L2gP70u6Ozue90/fTA+UfgSfgmfEh+eH2lITUfqNMebf4oDvAMsNz/OWQ81Ey3z89XBQh
+  </data>
+ </layer>
+ <layer name="top" width="40" height="20" opacity="0.75">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjILhC2QH2gEEgO5AO4AAsB1oBxAAo+FHGRgNP8rAaPhRBkbDjzIwlMMPAJuDApo=
+  </data>
+ </layer>
+ <objectgroup name="objects" visible="0">
+  <object id="1" name="switch" x="37.583" y="229.833" width="6.33333" height="7.33333">
+   <properties>
+    <property name="doorID" value="1"/>
+    <property name="doorLevel" value="0"/>
+    <property name="id" value="0"/>
+   </properties>
+  </object>
+  <object id="2" name="door" x="531.667" y="67.833" width="11.3333" height="26.3333">
+   <properties>
+    <property name="id" value="1"/>
+    <property name="key" value="0"/>
+    <property name="open" value="false"/>
+    <property name="tpDoor" value="0"/>
+    <property name="tpLevel" value="1"/>
+   </properties>
+  </object>
+  <object id="5" name="door" x="51.1667" y="66.8333" width="11.3333" height="26.3333">
+   <properties>
+    <property name="id" value="0"/>
+    <property name="key" value="0"/>
+    <property name="open" value="false"/>
+    <property name="tpDoor" value="0"/>
+    <property name="tpLevel" value="1"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="enemies">
+  <object id="6" name="locodrilo" x="162.5" y="59" width="15.5" height="24"/>
+  <object id="8" name="locodrilo" x="436.25" y="226" width="15.5" height="24"/>
+  <object id="9" name="locodrilo" x="237.25" y="259.5" width="15.5" height="24"/>
+  <object id="10" name="locodrilo" x="130.75" y="245" width="15.5" height="24"/>
+ </objectgroup>
+</map>

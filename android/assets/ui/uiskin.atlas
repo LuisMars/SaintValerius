@@ -1,0 +1,163 @@
+uiskin.png
+size: 128, 64
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+touchpad
+    rotate: false
+    xy: 0, 64
+    size: 64, 64
+    orig: 64, 64
+    offset: 0, 0
+    index: -1
+button-orange
+    rotate: false
+    xy: 64, 64
+    size: 16, 16
+    split: 5, 5, 5, 5
+    orig: 16, 16
+    offset: 0, 0
+    index: -1
+button-brown
+    rotate: false
+    xy: 64, 80
+    size: 16, 16
+    split: 5, 5, 5, 5
+    orig: 16, 16
+    offset: 0, 0
+    index: -1
+header
+    rotate: false
+    xy: 0, 128
+    size: 64, 32
+    split: 16, 16, 15, 15
+    orig: 64, 32
+    offset: 0, 0
+    index: -1
+scrollbar-h
+    rotate: false
+    xy: 64, 128
+    size: 32, 16
+    split: 8, 8, 0, 0
+    orig: 32, 16
+    offset: 0, 0
+    index: -1
+scrollbar-v
+    rotate: false
+    xy: 96, 128
+    size: 16, 32
+    split: 0, 0, 8, 8
+    orig: 16, 32
+    offset: 0, 0
+    index: -1
+gold-knob
+    rotate: false
+    xy: 64, 144
+    size: 16, 16
+    orig: 16, 16
+    offset: 0, 0
+    index: -1
+checkbox
+    rotate: false
+    xy: 0, 160
+    size: 16, 16
+    orig: 16, 16
+    offset: 0, 0
+    index: -1
+background-dark
+    rotate: false
+    xy: 80, 144
+    size: 16, 16
+    split: 4, 4, 4, 4
+    orig: 16, 16
+    offset: 0, 0
+    index: -1
+background-light
+    rotate: false
+    xy: 112, 128
+    size: 16, 16
+    split: 7, 7, 8, 7
+    orig: 16, 16
+    offset: 0, 0
+    index: -1
+background-dark2
+    rotate: false
+    xy: 112, 144
+    size: 16, 16
+    split: 4, 4, 4, 4
+    orig: 16, 16
+    offset: 0, 0
+    index: -1
+cursor
+    rotate: false
+    xy: 80, 64
+    size: 3, 16
+    orig: 3, 16
+    offset: 0, 0
+    index: -1
+selection
+    rotate: false
+    xy: 69, 64
+    size: 1, 16
+    orig: 1, 16
+    offset: 0, 0
+    index: -1
+a-button
+    rotate: false
+    xy: 0, 0
+    size: 32, 32
+    orig: 32, 32
+    offset: 0, 0
+    index: -1
+b-button
+    rotate: false
+    xy: 32, 0
+    size: 32, 32
+    orig: 32, 32
+    offset: 0, 0
+    index: -1
+x-button
+    rotate: false
+    xy: 64, 0
+    size: 32, 32
+    orig: 32, 32
+    offset: 0, 0
+    index: -1
+y-button
+    rotate: false
+    xy: 96, 0
+    size: 32, 32
+    orig: 32, 32
+    offset: 0, 0
+    index: -1
+scroll-side
+    rotate: false
+    xy: 64, 32
+    size: 32, 32
+    split: 9, 9, 9, 9
+    orig: 32, 32
+    offset: 0, 0
+    index: -1
+scroll
+    rotate: false
+    xy: 0, 32
+    size: 32, 32
+    split: 9, 9, 9, 9
+    orig: 32, 32
+    offset: 0, 0
+    index: -1
+scroll-closed
+    rotate: false
+    xy: 32, 32
+    size: 32, 32
+    split: 9, 9, 9, 9
+    orig: 32, 32
+    offset: 0, 0
+    index: -1
+white
+    rotate: false
+    xy: 129, 31
+    size: 3, 3
+    orig: 3, 3
+    offset: 0, 0
+    index: -1

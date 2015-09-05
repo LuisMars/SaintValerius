@@ -1,0 +1,57 @@
+{
+com.badlogic.gdx.graphics.g2d.BitmapFont: { default-font: { file: fairfax.fnt } },
+com.badlogic.gdx.graphics.g2d.BitmapFont: { medium-font: { file: vinque-medium.fnt } },
+com.badlogic.gdx.graphics.g2d.BitmapFont: { big-font: { file: vinque_big.fnt } },
+com.badlogic.gdx.graphics.Color: {
+    green: { a: 1, b: 0, g: 1, r: 0 },
+    white: { a: 1, b: 1, g: 1, r: 1 },
+    blue: { a: 1, b: 0.5, g: 0.32, r: 0 },
+    red: { a: 1, b: 0.08, g: 0.13, r: 0.89 },
+    black: { a: 1, b: 0, g: 0, r: 0 },
+    brown: { a: 1, b: 0.05, g: 0.24, r: 0.36 },
+    transparent: { a: 0, b: 0, g: 0, r: 0 },
+},
+com.badlogic.gdx.scenes.scene2d.ui.Skin$TintedDrawable: {
+  dialogDim: { name: white, color: { r: 0, g: 0, b: 0, a: 0.45 } },
+},
+com.badlogic.gdx.scenes.scene2d.ui.Button$ButtonStyle: {
+	default: { down: button-brown, up: button-orange}
+	a: { up: a-button}
+	b: { up: b-button}
+	x: { up: x-button}
+	y: { up: y-button}
+
+},
+com.badlogic.gdx.scenes.scene2d.ui.TextButton$TextButtonStyle: {
+	toggle: { down: background-light, up: background-light, font: default-font, fontColor: brown, downFontColor: red}
+},
+com.badlogic.gdx.scenes.scene2d.ui.Label$LabelStyle: {
+	default: { font: default-font, fontColor: blue }
+	title: { font: big-font, fontColor: red }
+	subtitle: { font: medium-font, fontColor: brown}
+},
+com.badlogic.gdx.scenes.scene2d.ui.TextField$TextFieldStyle: {
+	default: { selection: selection, background: background-light, font: default-font, fontColor: brown, cursor: cursor }
+},
+com.badlogic.gdx.scenes.scene2d.ui.Touchpad$TouchpadStyle: {
+	default: { background: touchpad, knob: button-brown }
+},
+com.badlogic.gdx.scenes.scene2d.ui.ScrollPane$ScrollPaneStyle: {
+  	default: { vScroll: scrollbar-v, hScrollKnob: gold-knob, hScroll: scrollbar-h, vScrollKnob: gold-knob, background: background-dark }
+    selectbox: { vScroll: scrollbar-v, hScrollKnob: gold-knob, hScroll: scrollbar-h, vScrollKnob: gold-knob, background: background-light }
+
+},
+com.badlogic.gdx.scenes.scene2d.ui.List$ListStyle: {
+	default: { fontColorUnselected: brown, selection: background-dark2, fontColorSelected: white, font: default-font }
+},
+es.luismars.Stages.Menus.Widgets.SelectBox$SelectBoxStyle: {
+    default: {
+            font: default-font, fontColor: brown, background: background-light
+    		scrollStyle: selectbox,
+    		listStyle: default
+    }
+},
+com.badlogic.gdx.scenes.scene2d.ui.CheckBox$CheckBoxStyle: {
+	default: { checkboxOn: gold-knob, checkboxOff: checkbox, font: default-font, fontColor: blue }
+},
+}

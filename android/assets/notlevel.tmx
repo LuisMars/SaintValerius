@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="50" height="20" tilewidth="16" tileheight="16" backgroundcolor="#000000" nextobjectid="1">
+ <tileset firstgid="1" name="citytileset" tilewidth="16" tileheight="16">
+  <image source="citytileset.png" trans="d77bba" width="256" height="256"/>
+  <tile id="38">
+   <properties>
+    <property name="collides" value="15"/>
+   </properties>
+  </tile>
+  <tile id="39">
+   <properties>
+    <property name="collides" value="15"/>
+   </properties>
+  </tile>
+  <tile id="70">
+   <properties>
+    <property name="collides" value="13"/>
+   </properties>
+  </tile>
+  <tile id="71">
+   <properties>
+    <property name="animation" value="sequia"/>
+    <property name="collides" value="16"/>
+   </properties>
+  </tile>
+  <tile id="72">
+   <properties>
+    <property name="collides" value="14"/>
+   </properties>
+  </tile>
+  <tile id="75">
+   <properties>
+    <property name="animation" value="sequia"/>
+    <property name="collides" value="16"/>
+   </properties>
+  </tile>
+  <tile id="76">
+   <properties>
+    <property name="animation" value="sequia"/>
+    <property name="collides" value="16"/>
+   </properties>
+  </tile>
+  <tile id="77">
+   <properties>
+    <property name="animation" value="sequia"/>
+    <property name="collides" value="16"/>
+   </properties>
+  </tile>
+ </tileset>
+ <layer name="back" width="50" height="20">
+  <data encoding="base64" compression="zlib">
+   eJzjYGBg4BjFo3gUj+JRPKKxOI3NZ6eBmRKDINxGMe0xKWnTfBC4l95+xpUPhKB4oP1CCTaikz2wsIqioT/w+YXUsoxQ+hgOcT/qj8GHldDwQLtnOGMAKa4hdw==
+  </data>
+ </layer>
+ <layer name="front" width="50" height="20">
+  <data encoding="base64" compression="zlib">
+   eJztkslKA0EQhvuggrtJVHDfjdckIggKTuL+DC53cXkxPbi8gT6C20E9qbifVNwQ/yE18Nt0zwzBmMsUfFTN9HTV/0+3UlFEEUUUUUTxf7EAFi0sUb1cKoEhYxWsWVineqNUAkOGnw8myEc1qCuezF9z5g3vy0B5CCq0fZXUtwa0gU5Qq/J+6kGDYd4ZOAcXBej35iQM641gBDQJXDPN2r5R6uuAdjAOsuKnC0wY5j2AR/AUQnuVpj8Fcj4+TLqZSYOPGIgLaaodqk3zvsAR+A7w0AJaRX9c9I+BDum7Irjn3x3gY0rZzyMmmjPkI0ceTP/tFtyDE/AJ7nx8xKgf93ekL89LBPjwu1fsI0P6bT7c+/Su8mdxJflD2e+X2z9F5Kj+ax+6dr5XWc3HoejXOZb1bbCj9Wftcclp8sH31/UxTHq59pi2+PDO2dPtdx6XovtG8qnka1nfBXv0fQ/otdBHtZI5/WAgBIOaD785PG8TbIFn8ALeJHu8Sr99cACSYKjIeQbMgrkC9yfp2fbuBxS1XaM=
+  </data>
+ </layer>
+ <layer name="front-detail" width="50" height="20">
+  <data encoding="base64" compression="zlib">
+   eJztlFtqwkAYRrMst6FWrY+t91dvrVvwsgG1y6gK+mLBC2gf2q6gdQXqBjyBKYZhLgFRVObAIf/8k29mEkI8z+FwOBwOh+M+iIaob4GnEPW184AJTBpqFSl8xLSldymymMO8oVZRwCKWLL1zoPreq1jDuqFW8YKv2LD0TiGG8cD4//y6711+PjmvQ/VPUGW/8Bv/pOuPZf1nzATG/vnHOBHjJrawjR0x/44DTV6HnxviyDu+I1X2V5PfWNYvY0XqrXCNn9jFHvbxTczPcK7JRwx7LXAZuE+19xY/RD3FnXAfYv1b5ADrFzp1
+  </data>
+ </layer>
+ <objectgroup name="objects" visible="0"/>
+</map>
