@@ -18,7 +18,6 @@ import java.util.List;
  * Created by Dalek on 15/07/2015.
  */
 public class SanValero extends MovableCharacter {
-    public List<Integer> currentLevelKeys = new ArrayList<Integer>();;
 
     public SanValero (GameMap map) {
         this(map.startPos().x, map.startPos().y, map);
@@ -45,6 +44,13 @@ public class SanValero extends MovableCharacter {
         setLevel(map.doorPos(tpDoor), map);
 
 
+    }
+
+
+    @Override
+    public void attack() {
+        super.attack();
+        getParent().addActor(new Bullet(gameMap, getCenter(), !isFlipped));
     }
 
     @Override

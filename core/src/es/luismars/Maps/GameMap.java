@@ -17,6 +17,7 @@ import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.utils.Array;
 import es.luismars.Characters.Drop;
+import es.luismars.Characters.FireLocodrilo;
 import es.luismars.Characters.Locodrilo;
 import es.luismars.Characters.SanValero;
 import es.luismars.Maps.MapItems.KeySwitch;
@@ -123,7 +124,12 @@ public class GameMap {
 
         for (RectangleMapObject enemy : enemies) {
             Rectangle r = enemy.getRectangle();
-            gameStage.enemies.addActor(new Locodrilo(r.x, r.y, this));
+            String enemyName = enemy.getName();
+            if (enemyName.equals("locodrilo"))
+                gameStage.enemies.addActor(new Locodrilo(r.x, r.y, this));
+            else if (enemyName.equals("fireLocodrilo"))
+                gameStage.enemies.addActor(new FireLocodrilo(r.x, r.y, this));
+
         }
     }
 

@@ -12,7 +12,7 @@ public class DesktopLauncher {
         new LwjglApplication(new Main(), config);
 
         config.title = "San Valero: From under the Sèquia (pre-Alpha)";
-		//config.resizable = false;
+
         config.vSyncEnabled = true;
 		config.addIcon("icon16.png", Files.FileType.Internal);
         config.addIcon("icon32.png", Files.FileType.Internal);

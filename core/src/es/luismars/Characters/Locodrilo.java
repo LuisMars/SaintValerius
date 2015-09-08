@@ -12,10 +12,12 @@ import es.luismars.Tools.AssetsLoader;
  */
 public class Locodrilo extends MovableCharacter {
 
+
     SanValero sanValero;
-    int attackDistance = 24;
+
+    int attackDistance = 32;
     boolean preparingAttack = false;
-    float attackDelay = 0.5f;
+    float attackDelay = 0.75f;
     float attackDelayTimer = 0;
 
     public Locodrilo(GameMap map) { this(map.startPos().x, map.startPos().y, map);}
@@ -37,8 +39,7 @@ public class Locodrilo extends MovableCharacter {
         createHitBoxes();
 
         MAX_SPEED = 40;
-
-
+        hurtTime = 0.50f;
         health = MAX_HEALTH = 3;
     }
 
@@ -94,6 +95,11 @@ public class Locodrilo extends MovableCharacter {
             return;
         }
 
+        behaviour();
+
+    }
+
+    public void behaviour() {
         if (hurtTimer == 0) {
             if (isGrounded && !isAttacking) {
                 if (collidesWallLeft) {
@@ -110,17 +116,16 @@ public class Locodrilo extends MovableCharacter {
                 speed.x *= -1;
             }
         }
-
     }
-
-
 
 
     public boolean isOnFloor(int offY) {
         int x = MathUtils.floor((position.x + getOriginX()) / 16);
         int y = MathUtils.round((position.y + getOriginY()) / 16) + offY;
         Rectangle[] boxes = gameMap.getCollisionBoxes(x, y);
-        Rectangle lowSensor = new Rectangle(position.x + getOriginX() - 4, position.y - 8, 8, 8);
+        //FIXME: get size and offset right
+        int offset = speed.x < 0 ? -8 : 0;
+        Rectangle lowSensor = new Rectangle(position.x + getOriginX() + offset, position.y - 8, 8, 8);
 
         if (boxes == null) {
             return false;
@@ -158,7 +163,10 @@ public class Locodrilo extends MovableCharacter {
                 shapes.rect(r.x, r.y, r.width, r.height);
             }
         }
-        Rectangle lowSensor = new Rectangle(position.x + getOriginX() - 4, position.y - 8, 8, 8);
+
+        int offset = speed.x < 0 ? -12 : 4;
+
+        Rectangle lowSensor = new Rectangle(position.x + getOriginX() + offset, position.y - 8, 8, 8);
 
         shapes.rect(lowSensor.x, lowSensor.y, lowSensor.width, lowSensor.height);
     }
@@ -172,7 +180,11 @@ public class Locodrilo extends MovableCharacter {
 
     public void checkDistance(SanValero sanValero) {
         if (sanValero.getCenter().dst(getCenter()) < attackDistance) {
-            isFlipped = sanValero.getCenter().x < getCenter().x;
+            if (!preparingAttack)
+                isFlipped = sanValero.getCenter().x < getCenter().x;
+            else if (!isAttacking) {
+                speed.x = isFlipped ? -MAX_SPEED : MAX_SPEED;
+            }
             attack();
         }
     }

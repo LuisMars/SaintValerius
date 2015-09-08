@@ -23,6 +23,7 @@ public class AssetsLoader {
     public static Map<String, Animation> Locodrilo;
     public static TextureRegion[][] healthbar;
     public static Map<String, Animation> Drops;
+    public static Map<String, Animation> Fireball;
 
     public static void loadHud() {
         healthbar = loadCharset("hud.png", 8);
@@ -45,15 +46,23 @@ public class AssetsLoader {
     public static void loadLocodrilo() {
         Locodrilo = new HashMap<String, Animation>();
         Drops = new HashMap<String, Animation>();
+        Fireball = new HashMap<String, Animation>();
+
         TextureRegion[][] charset = loadCharset("locodrilo.png");
 
         Locodrilo.put("walk", getAnimation(charset[0], 0, 6, PlayMode.LOOP, 2));
         charset = loadCharset("locodrilo attack.png");
-        Locodrilo.put("attack", getAnimation(charset[0], 0, 5, PlayMode.LOOP_PINGPONG, 2));
+        Locodrilo.put("attack", getAnimation(charset[0], 0, 6, PlayMode.LOOP_PINGPONG, 2));
+
+        charset = loadCharset("locodrilo launch.png");
+        Locodrilo.put("launch-fire", getAnimation(charset[0], 0, 10, PlayMode.LOOP, 2));
 
         TextureRegion[] heart = new TextureRegion[1];
         heart[0] = new TextureRegion(new Texture("heart.png"));
         Drops.put("heart", getAnimation(heart, 0, 1, PlayMode.LOOP, 1));
+
+        charset = loadCharset("fireball.png", 16);
+        Fireball.put("move", getAnimation(charset[0], 0, 4, PlayMode.LOOP, 1));
     }
 
     private static Animation getAnimation(TextureRegion[] textureRegions, int start, int length, PlayMode playMode, float playrate) {

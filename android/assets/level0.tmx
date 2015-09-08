@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="40" height="20" tilewidth="16" tileheight="16" backgroundcolor="#000000" nextobjectid="11">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="40" height="20" tilewidth="16" tileheight="16" backgroundcolor="#000000" nextobjectid="12">
  <tileset firstgid="1" source="tileset.tsx"/>
  <layer name="back" width="40" height="20">
   <properties>
@@ -47,9 +47,9 @@
   </object>
  </objectgroup>
  <objectgroup name="enemies">
-  <object id="6" name="locodrilo" x="162.5" y="59" width="15.5" height="24"/>
   <object id="8" name="locodrilo" x="436.25" y="226" width="15.5" height="24"/>
   <object id="9" name="locodrilo" x="237.25" y="259.5" width="15.5" height="24"/>
   <object id="10" name="locodrilo" x="130.75" y="245" width="15.5" height="24"/>
+  <object id="11" name="fireLocodrilo" x="386.25" y="66" width="15.5" height="24"/>
  </objectgroup>
 </map>

@@ -78,7 +78,6 @@ public abstract class Movable extends Actor {
 
         speed.mulAdd(acceleration, delta);
         if (!isGrounded) {
-            speed.x = MathUtils.clamp(speed.x, -ACCELERATION * .66f, ACCELERATION * .66f);
             speed.x = MathUtils.clamp(speed.x, -MAX_SPEED * .66f, MAX_SPEED * .66f);
         } else {
             speed.x = MathUtils.clamp(speed.x, -MAX_SPEED, MAX_SPEED);
@@ -229,5 +228,9 @@ public abstract class Movable extends Actor {
         currentFrame.flip(currentFrame.isFlipX() != isFlipped, false);
         batch.draw(currentFrame, getX(), getY(), getWidth(), getHeight());
         batch.setColor(Color.WHITE);
+    }
+
+    public boolean isCurAniFinished() {
+        return animations.get(currentAnimation).isAnimationFinished(stateTime);
     }
 }

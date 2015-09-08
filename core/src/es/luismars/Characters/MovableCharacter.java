@@ -171,7 +171,8 @@ public abstract class MovableCharacter extends Movable {
         if (hurtTimer == 0) {
             setColor(1, 1, 1, parentAlpha);
         } else {
-            setColor(1, 1 - hurtTimer, 1 - hurtTimer, 1);
+            float alpha = 1 - (hurtTimer / hurtTime);
+            setColor(1, alpha, alpha, 1);
         }
         batch.setColor(getColor());
         TextureRegion currentFrame = animations.get(currentAnimation).getKeyFrame(stateTime);
@@ -208,15 +209,15 @@ public abstract class MovableCharacter extends Movable {
     }
 
     float hurtTimer;
+    float hurtTime = 1;
 
     public void applyDamage(int i) {
         //if (isAttacking) return;
         if (hurtTimer == 0) {
             health -= i;
-            hurtTimer = 1;
-            speed.y = 32;
-            speed.x = 0;
-            acceleration.x = 0;
+            hurtTimer = hurtTime;
+            speed.y /= 2;
+            speed.x /= 2;
             Shake.shake(0.25f * i);
         }
     }

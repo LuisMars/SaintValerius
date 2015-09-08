@@ -13,12 +13,9 @@ import com.badlogic.gdx.math.Vector3;
 import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.Group;
 import com.badlogic.gdx.utils.viewport.Viewport;
-import es.luismars.Characters.Drop;
-import es.luismars.Characters.Locodrilo;
+import es.luismars.Characters.*;
 import es.luismars.Maps.OverworldMap;
 import es.luismars.Tools.AssetsLoader;
-import es.luismars.Characters.MovableCharacter;
-import es.luismars.Characters.SanValero;
 import es.luismars.Main;
 import es.luismars.Maps.GameMap;
 import es.luismars.Stages.Menus.*;
@@ -162,9 +159,28 @@ public class GameStage extends CustomStage {
     @Override
     public void act() {
         super.act();
+
+        for (Actor a : getActors()) {
+            if (a instanceof Bullet) {
+                Bullet b = ((Bullet) a);
+                for (Actor e : enemies.getChildren()) {
+                    if (e instanceof Locodrilo) {
+                        Locodrilo l = (Locodrilo) e;
+                        if (b.collidesWith(l)) {
+                            l.applyDamage(1);
+                            b.remove();
+                        }
+                    }
+                }
+                if (b.collidesWithEnvoirement()) {
+                    b.remove();
+                }
+            }
+        }
+
         for (Actor a : enemies.getChildren()) {
             if (a instanceof Locodrilo) {
-                Locodrilo l = ((Locodrilo) a);
+                Locodrilo l = (Locodrilo) a;
                 l.checkDistance(sanValero);
                 if (sanValero.collidesAttack(l)) {
                     l.applyDamage(1);
@@ -180,6 +196,12 @@ public class GameStage extends CustomStage {
                     if (drop.canBeCaught() && sanValero.addHealth(1)) {
                         a.remove();
                     }
+                }
+            } else if (a instanceof Bullet) {
+                Bullet b = (Bullet) a;
+                if (sanValero.collidesWith(b)) {
+                    sanValero.applyDamage(1);
+                    b.remove();
                 }
             }
         }
